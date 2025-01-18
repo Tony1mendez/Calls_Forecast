@@ -122,3 +122,12 @@ fig_combined.update_layout(title='Combined Age Group Forecast', xaxis_title='Dat
 # Display the combined figure in the Streamlit app
 st.header("Combined Age Group Forecast:")
 st.plotly_chart(fig_combined)
+
+st.header('PEDIATRIC FORECAST DATASET: ')
+st.dataframe(pediatric_forecast.drop('Unnamed: 0',axis=1))
+
+st.header('ADULT FORECAST DATASET: ')
+st.dataframe(adult_forecast.drop('Unnamed: 0',axis=1))
+
+st.header('COMBINED FORECAST DATASET: ') 
+st.dataframe(final_df)
